@@ -113,7 +113,7 @@ displayIngredientDetails(data){
     }
     //  DISPLAY RECIPES
     for (let index = 0; index < recipes.length; index++) {
-      if (recipes[index].length != 0 || recipes[index] == null) {
+      if (recipes[index] != "" && recipes[index] != null) {
         recipesStr += `
         <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${recipes[index]}</div>
         `
@@ -161,6 +161,7 @@ displayIngredientDetails(data){
   </div>      
     </div>
     `
+    
   };
   $(".instructionsDetails").html(details);
   $('#closerIng').click(() => {

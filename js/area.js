@@ -57,7 +57,7 @@ export class Area
     <i class="fas fa-arrow-left fs-3 btn btn-dark"></i>
                 </div>`;
     for(let i=0; i < arr.length ;i++)
-    { console.log(arr[i].idMeal);
+    { 
     cartona += ` 
     <div data-id="${arr[i].idMeal}" class="col-md-3 p-0 position-relative box case   overflow-hidden">
     <div class="inner px-10">
@@ -109,7 +109,7 @@ displayAreaDetails(data){
     }
     //  DISPLAY RECIPES
     for (let index = 0; index < recipes.length; index++) {
-      if (recipes[index].length != 0 || recipes[index].innerHTML == null) {
+      if (recipes[index] != "" && recipes[index] != null) {
         recipesStr += `
         <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${recipes[index]}</div>
         `
@@ -119,7 +119,7 @@ displayAreaDetails(data){
     tags.push(data[i].strTags?.split(","))
     //  DISPLAY TAGS
       for (let index = 0; index < tags.length; index++) {
-          if (tags.length == 0 || tags[index] == undefined || tags[index] == null) {
+          if (tags.length == 0 || tags[index] == undefined || tags[index].innerHTML == "null") {
           }
           else {
             tags[index].map((tag)=>{

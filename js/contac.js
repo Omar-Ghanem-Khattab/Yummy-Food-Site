@@ -74,7 +74,7 @@ validateContactsPass()
 { 
     let passwordInp = document.getElementById('passwordInp')
     let regex = /^(?=.*\d)(?=.*[a-z])[0-9a-zA-Z]{8,}$/;
-    if (regex.test(passwordInp.value)== true  ) 
+    if (regex.test(passwordInp.value)=== true  ) 
     {
         passwordInp.style.border='none'
         $('#invalidPass').addClass('d-none');
