@@ -113,7 +113,7 @@ displayIngredientDetails(data){
     }
     //  DISPLAY RECIPES
     for (let index = 0; index < recipes.length; index++) {
-      if (recipes[index].length != 0 || recipes[index].innerHTML == "null") {
+      if (recipes[index].length != 0 || recipes[index] == null) {
         recipesStr += `
         <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${recipes[index]}</div>
         `
@@ -123,7 +123,7 @@ displayIngredientDetails(data){
     tags.push(data[i].strTags?.split(","))
     //  DISPLAY TAGS
       for (let index = 0; index < tags.length; index++) {
-          if (tags.length == 0 || tags[index] == undefined || tags[index].innerHTML == "null") {
+          if (tags.length == 0 || tags[index] == undefined || tags[index] == null) {
           }
           else {
             tags[index].map((tag)=>{
@@ -161,7 +161,6 @@ displayIngredientDetails(data){
   </div>      
     </div>
     `
-    
   };
   $(".instructionsDetails").html(details);
   $('#closerIng').click(() => {
@@ -169,79 +168,4 @@ displayIngredientDetails(data){
        $('#ingMeals').fadeIn(400)
     })
 }
-
 };
-
-
-
-
-
-
-
-// displayIngredientDetails(data){
-//   let details = ``;
-//   for(let i=0; i < data.length ;i++){
-//   details += `
-//   <div class="closedIcon d-flex justify-content-end">
-//   <i class="fas fa-xmark fs-3 btn btn-dark " id="closerIng"></i>
-//   </div>
-//   <div class=" text-white col-12 col-lg-4">
-//     <img src="${data[i].strMealThumb}" class="rounded w-100" >
-//     <div class="name fs-3 py-2 text-center">${data[i].strMeal}</div>
-//   </div>
-//   <div class="info text-white  col-12 col-lg-8 ">
-//     <p class="title fw-bold fs-3">Instrauctions</p>
-//     <p class="instrauctions  ">${data[i].strInstructions}}</p>
-//     <p class="fw-bold fs-3">Area: <span class="area fw-normal">${data[i].strArea}</span></p>
-//     <p class="fw-bold fs-3">Category: <span class="category fw-normal">${data[i].strCategory}</span></p>
-//     <p class="fw-bold fs-3 d-block">Recipes: </p>
-//     <div class="recipes d-flex flex-wrap mb-4">
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient1}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient2}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient3}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient4}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient5}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient6}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient7}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient8}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient9}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient10}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient11}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient12}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient13}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient14}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient15}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient16}</div>
-//     <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${data[i].strIngredient17}</div>
-//     </div>
-//     <div>
-//     <p class="fs-3 fw-bold d-block">Tags : </p>
-//     <div class="d-flex gap-1">
-//       <a href="${data[i].strSource}" target="_blanck" class="btn btn-success">Source</a>
-//       <a href="${data[i].strYoutube}" target="_blanck" class="btn btn-danger">Youtube</a>
-//     </div></div>
-//   </div>`
-// }
-// $(".instructionsDetails").html(details);
-// let alert = document.querySelectorAll(".alert")
-// for (let i = 0; i < alert.length ;i++) {
-//   if (alert[i].innerHTML.length == 0 || alert[i].innerHTML == "null") {
-//     alert[i].classList.add("d-none")
-//   }
-// }
-
-// $('#closerIng').click(() => {
-//   $('.instaOff').fadeOut(100)
-//    $('#ingMeals').fadeIn(400)
-// })
-// }
-
-
-
-
-
-// $('#displayer .box').click(function (eventInfo) {
-//     let mealData= eventInfo.target.getAttribute('data-id');
-//     let sectionOffset = $(mealData).offset().top;
-//     $('body').animate({scrollTop:sectionOffset}, 1000);
-//   })

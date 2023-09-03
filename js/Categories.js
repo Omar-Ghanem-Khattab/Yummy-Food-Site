@@ -111,7 +111,7 @@ displayCateInstructions(data){
       }
       //  DISPLAY RECIPES
       for (let index = 0; index < recipes.length; index++) {
-        if (recipes[index].length != 0 || recipes[index].innerHTML == "null") {
+        if (recipes[index].length != 0 || recipes[index] == null) {
           recipesStr += `
           <div class="mt-3 alert py-1 px-3 alert-info me-3 rounded">${recipes[index]}</div>
           `
@@ -121,7 +121,8 @@ displayCateInstructions(data){
       tags.push(data[i].strTags?.split(","))
       //  DISPLAY TAGS
         for (let index = 0; index < tags.length; index++) {
-            if (tags.length == 0 || tags[index] == undefined || tags[index].innerHTML == "null") {
+            if (tags.length == 0 || tags[index] == undefined || tags[index] == null) {
+                
             }
             else {
               tags[index].map((tag)=>{
