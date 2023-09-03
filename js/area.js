@@ -41,7 +41,6 @@ export class Area
    
     document.querySelector('.areaData').innerHTML = cartona;
     document.querySelectorAll('.areaData .case').forEach((box) => {
-        // $(box).addClass('d-inline-block')
         box.addEventListener('click', () => {
             this.getAreaData(box.querySelector('h2').innerHTML.toLocaleLowerCase())
             $('.areaData').fadeOut(100)  

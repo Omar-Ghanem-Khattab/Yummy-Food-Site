@@ -74,6 +74,7 @@ displayCateData(arr)
             $('.CateMeals').fadeOut(100 ) 
             $('.instaOff').fadeIn(400)
             $('.instructionsDetails').fadeIn(400)
+            $('.instructionsDetails').css({display: 'flex'})
         })
     })
     $('.backIcon').click(() => {

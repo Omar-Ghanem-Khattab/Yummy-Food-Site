@@ -11,13 +11,11 @@ export class Contact {
     {
         nameInp.style.border='none'
         $('#invalidName').addClass('d-none');
-        // $('#btnDisapling').removeAttr('disabled');
         return true;
     } else 
     {
         nameInp.style.border='3px solid red'
         $('#invalidName').removeClass('d-none');
-        // $('#btnDisapling').attr("disabled" , "");
         return false;
     }
 } 
@@ -30,13 +28,11 @@ validateContactsEmail()
     {
         emailInp.style.border='none'
         $('#invalidEmail').addClass('d-none');
-        // $('#btnDisapling').removeAttr('disabled');
         return true;
     } else 
     {
         emailInp.style.border='3px solid red'
         $('#invalidEmail').removeClass('d-none');
-        // $('#btnDisapling').attr("disabled" , "");
         return false;
     }
 } 
@@ -49,13 +45,11 @@ validateContactsPNum()
     {
         phoneInp.style.border='none'
         $('#invalidPN').addClass('d-none');
-        // $('#btnDisapling').removeAttr('disabled');
         return true;
     } else 
     {
         phoneInp.style.border='3px solid red'
         $('#invalidPN').removeClass('d-none');
-        // $('#btnDisapling').attr("disabled" , "");
         return false;
     }
 } 
@@ -67,13 +61,11 @@ validateContactsAge()
     {
         ageInp.style.border='none'
         $('#invalidAge').addClass('d-none');
-        // $('#btnDisapling').removeAttr('disabled');
         return true;
     } else 
     {
         ageInp.style.border='3px solid red'
         $('#invalidAge').removeClass('d-none');
-        // $('#btnDisapling').attr("disabled" , "");
         return false;
     }
 } 
@@ -86,13 +78,11 @@ validateContactsPass()
     {
         passwordInp.style.border='none'
         $('#invalidPass').addClass('d-none');
-        // $('#btnDisapling').removeAttr('disabled');
         return true;
     } else 
     {
         passwordInp.style.border='3px solid red'
         $('#invalidPass').removeClass('d-none');
-        // $('#btnDisapling').attr("disabled" , "");
         return false;
     }
     

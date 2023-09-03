@@ -80,10 +80,7 @@ area.addEventListener('click', async function () {
   $('.inputs').fadeIn(700);
  })
 
-//  $('search').parent().siblings().children().click(function () {
-//    $('.instructionsDetails').fadeOut(100)
-//    console.log('hi');
-//    $('.displayer').removeClass('d-none')
+
    for (let i = 0; i < searching.length; i++) {
     searching[i].value='';
    }
@@ -141,23 +138,19 @@ nameInp.addEventListener('keyup',function () {
             if (passwordInp.value === rePassInp.value ) {
               rePassInp.style.border='none'
               $('#invalidRPass').addClass('d-none');
-              // $('#btnDisapling').removeAttr('disabled');
               return true;
             }else{
               rePassInp.style.border='3px solid red'
               $('#invalidRPass').removeClass('d-none');
-              // $('#btnDisapling').attr("disabled" , "");
               return false;
             }
            })
            
            if (nameInp.value !=" " && passwordInp.value !=" " && emailInp.value!=" " && ageInp.value!=" " && phoneInp.value !=" " && rePassInp.value == passwordInp.value) 
            {  
-            console.log('3shan 5atry');
             $('#btnDisapling').attr("disabled", "");
            }else
            {
-            console.log('m3lsh');
             $('#btnDisapling').removeAttr('disabled');
            }
 

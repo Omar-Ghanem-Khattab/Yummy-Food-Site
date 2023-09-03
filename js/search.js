@@ -30,14 +30,11 @@ export class Search
     document.querySelectorAll('.foundedData .box').forEach((box) => {
       box.addEventListener('click', () => {
        this.getSearchData(box.dataset.id)
-      //  $('.instructionsDetails').fadeOut(100);
       $('.foundedData').fadeOut(100)  
       $('.inputs').fadeOut(100);
       $('.instructionsDetails').fadeIn(300) 
       $('.instaOff').fadeIn(400)
       $('.instructionsDetails').addClass('d-flex')
-       console.log('hi');
-        
       })
     })
    
