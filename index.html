@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+<!-- Loading Page  -->
+<div class="loadingPage ">
+    <div class="sk-chase ">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+    <!-- Nav Bar  -->
+<nav>
+        <div class="container">
+            <div class="side-nav-bar position-fixed p-5 d-flex flex-column justify-content-between ">
+                <div id="opening" class="position-absolute  fs-3 top-50 translate-middle-y  d-flex flex-column align-items-center justify-content-between">
+                    <div class="imgSpot justify-content-center ">
+                    <img src="imgs/logo.png" class="w-100  backToHome">
+                </div>
+                    <div class="opening-icons">
+                        <i id="bars" class="fa-solid fa-bars "></i>
+                        <i id="close" class="fas fa-x d-none"></i>
+                    </div>
+                    <div class="social-icons w-50">
+                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-share-nodes"></i>
+                    </div>
+                </div>
+                <ul id="sliding" >
+                    <li class="p-4 pe-2"><a id="Search" href="#">Search</a></li>
+                    <li class="p-4 pe-2"><a id="Categories" href="#" >Categories</a></li>
+                    <li class="p-4 pe-2"><a id="Area" href="#">Area</a></li>
+                    <li class="p-4 pe-2"><a id="Ingredients" href="#" >Ingredients</a></li>
+                    <li class="p-4 pe-2"><a id="Contact"  href="#">Contact Us</a></li>
+                </ul>
+                <div class="nav-bar-footer text-light  ">
+                    <div class="footer-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <p>Copyright Â© 2019 All Rights Reserved.</p>
+                </div>
+            </div>
+      
+        </div>
+    </nav>
+<!-- Search -->
+<section class="inputs vh-100" id="search">
+    <div class="container">
+        <div class="innering d-flex gap-3">
+    <input type="search" class="form-control  my-4  searching " placeholder="Search By Name" id="sByName" >
+    <input type="search" class="form-control  my-4 searching " placeholder="Search By First letter" id="sByFL"  maxlength="1">
+</div>
+<div class="foundedData row gy-5 ">
+
+</div>
+
+<div class="details  d-flex row  py-5">
+
+</div>
+</div>
+</section>
+<!-- section Home -->
+<section id="home">
+    <div class="container " >
+        <div class="row gy-5  " id="homeDisplay">
+    
+        </div>
+    </div>
+</section>
+<!-- ingredient -->
+<section id="ingredient">
+ <div class="container py-5">
+    <div class="row gy-5" id="ingredients">
+
+    </div>
+    <div class="row dis-none gy-5" id="ingMeals">
+        
+    </div>
+ </div>
+</section>
+<!-- section Instructions -->
+<section id="instructuins" class="instaOff">
+    <div class="container">
+        <div class="instructionsDetails d-flex  py-5 row">
+
+        </div>
+    </div>
+</section>
+<!-- Area -->
+<section id="area" class="disabling">
+    <div class="container py-5">
+        <div class="areaData  gy-5  row">
+            
+        </div>
+        <div class="areaMeals  gy-5  row">
+            
+        </div>
+    </div>
+</section>
+<!-- Category --> 
+<section id="Category" >
+    <div class="container py-5 ">
+        <div class="CateDisplayer gy-5  row">
+            
+        </div>
+        <div class="CateMeals gy-5  row">
+            
+        </div>
+    </div>
+</section>
+
+     <!-- Contact us  -->
+     <section id="contactSection" class="">
+        <div class="container text-center vh-100 d-flex justify-content-center align-items-center ">
+            <div class="row text-center d-flex justify-content-center align-items-center w-100">
+                <div class="col-md-6">
+                    <input  id="nameInp" type="text" class="form-control my-3 gap-2" placeholder="Enter Your Name "  >
+                    <p  id="invalidName" class="alert alert-danger w-100 d-none">❌ You Must Start With Capital letter also Special Characters and Numbers are not allowed</p>
+                    <input id="phoneInp" type="number" class="form-control my-3 gap-2" placeholder="Enter Your Phone "  >
+                    <p  id="invalidPN" class="alert alert-danger w-100 d-none">❌ Enter Valid Phone Number</p>
+                    <input id="passwordInp" type="password" class="form-control my-3 gap-2" placeholder="Enter Your Password "  >
+                    <p  id="invalidPass" class="alert alert-danger w-100 d-none ">❌ Enter Valid password *Minimum 8 characters, at least one letter and one number*</p>
+                </div>
+                <div class="col-md-6">
+                    <input id="emailInp" type="email" class="form-control my-3 gap-2" placeholder="Enter Your Email "  >
+                    <p  id="invalidEmail" class="alert alert-danger w-100 d-none">❌ Email not Valid *Exemple@yyy.com</p>
+                    <input id="ageInp" type="number" class="form-control my-3 gap-2" placeholder="Enter Your Age "  >
+                    <p  id="invalidAge" class="alert alert-danger w-100 d-none">❌ Enter Valid age</p>
+                    <input id="rePassInp" type="password" class="form-control my-3 gap-2" placeholder="Repeat Your Password  "  >
+                    <p  id="invalidRPass" class="alert alert-danger w-100 d-none">❌ Your Password Dos not Match</p>
+                </div>
+                <button id="btnDisapling"  class=" btn btn-danger w-25" type="submit">Submit</button>
+            </div>
+        </div>
+       </section>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
