@@ -121,38 +121,61 @@ contact.addEventListener('click',  function () {
 
 nameInp.addEventListener('keyup',function () { 
   let contVal= new Contact()
-  contVal.validateContactsName() })
+  contVal.validateContactsName() 
+  checkInputs()
+})
   emailInp.addEventListener('keyup',function () { 
     let emailVal= new Contact()
-    emailVal.validateContactsEmail() })
+    emailVal.validateContactsEmail()
+    checkInputs()
+  })
     phoneInp.addEventListener('keyup',function () { 
       let pNumVal= new Contact()
-      pNumVal.validateContactsPNum() })
+      pNumVal.validateContactsPNum()
+      checkInputs()
+     })
       ageInp.addEventListener('keyup',function () { 
         let ageVal= new Contact()
-        ageVal.validateContactsAge() })
+        ageVal.validateContactsAge() 
+        checkInputs()
+      })
         passwordInp.addEventListener('keyup',function () { 
           let passVal= new Contact()
-          passVal.validateContactsPass() })
+          passVal.validateContactsPass()
+          checkInputs()
+         })
           rePassInp.addEventListener('keyup', function () { 
             if (passwordInp.value === rePassInp.value ) {
               rePassInp.style.border='none'
               $('#invalidRPass').addClass('d-none');
+              checkInputs()
               return true;
             }else{
               rePassInp.style.border='3px solid red'
               $('#invalidRPass').removeClass('d-none');
+              checkInputs()
               return false;
             }
            })
            
-           if (nameInp.value !=" " && passwordInp.value !=" " && emailInp.value!=" " && ageInp.value!=" " && phoneInp.value !=" " && rePassInp.value == passwordInp.value) 
-           {  
-            $('#btnDisapling').attr("disabled", "");
-           }else
-           {
-            $('#btnDisapling').removeAttr('disabled');
+           function checkInputs()
+            {
+              const isValidInput1 = nameInp.value.trim() !== "";
+              const isValidInput2 = passwordInp.value.trim() !== "";
+              const isValidInput3 = phoneInp.value.trim() !== "";
+              const isValidInput4 = passwordInp.value.trim() !== "";
+              const isValidInput5 = ageInp.value.trim() !== "";
+              const isValidInput6 = passwordInp.value == rePassInp.value;
+              if (isValidInput1  && isValidInput2  && isValidInput3 && isValidInput4 && isValidInput5 && isValidInput6) 
+              {  
+                $('#btnDisapling').removeAttr('disabled');
+              }else
+              {
+                $('#btnDisapling').attr("disabled", "");
+              }
+
            }
+          
 
     // SECTION - Loading page 
 

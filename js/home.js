@@ -120,9 +120,6 @@ displayHomeInstructions(data){
      $('#homeDisplay').fadeIn(400)
 })
 }
-
-
-
 };
 
 
