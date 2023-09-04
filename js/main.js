@@ -119,32 +119,32 @@ contact.addEventListener('click',  function () {
 
 //SECTION -  Validation Contact us 
 
-nameInp.addEventListener('keyup',function () { 
+nameInp.addEventListener('input',function () { 
   let contVal= new Contact()
   contVal.validateContactsName() 
   checkInputs()
 })
-  emailInp.addEventListener('keyup',function () { 
+  emailInp.addEventListener('input',function () { 
     let emailVal= new Contact()
     emailVal.validateContactsEmail()
     checkInputs()
   })
-    phoneInp.addEventListener('keyup',function () { 
+    phoneInp.addEventListener('input',function () { 
       let pNumVal= new Contact()
       pNumVal.validateContactsPNum()
       checkInputs()
      })
-      ageInp.addEventListener('keyup',function () { 
+      ageInp.addEventListener('input',function () { 
         let ageVal= new Contact()
         ageVal.validateContactsAge() 
         checkInputs()
       })
-        passwordInp.addEventListener('keyup',function () { 
+        passwordInp.addEventListener('input',function () { 
           let passVal= new Contact()
           passVal.validateContactsPass()
           checkInputs()
          })
-          rePassInp.addEventListener('keyup', function () { 
+          rePassInp.addEventListener('input', function () { 
             if (passwordInp.value === rePassInp.value ) {
               rePassInp.style.border='none'
               $('#invalidRPass').addClass('d-none');
@@ -157,7 +157,7 @@ nameInp.addEventListener('keyup',function () {
               return false;
             }
            })
-           
+           //Submit button Enabling/ disabling
            function checkInputs()
             {
               const isValidInput1 = nameInp.value.trim() !== "";
