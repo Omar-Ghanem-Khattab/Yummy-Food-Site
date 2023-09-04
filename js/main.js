@@ -40,7 +40,7 @@ categories.addEventListener('click', async function () {
   await $('.box').fadeIn(1000);
   await $(Category).siblings('section').fadeOut(100);
   await $(Category).fadeIn(400);
-  
+  await $('.CateDisplayer').fadeIn(400);  
  })
  //SECTION - ingredients event
 
@@ -50,6 +50,8 @@ categories.addEventListener('click', async function () {
    await $('.box').fadeIn(700);
    await $(ingredient).siblings('section').fadeOut(100);
    await $(ingredient).fadeIn(400);
+   await $('#ingredient').fadeIn(400);
+ 
  })
 
  //SECTION - area event
@@ -60,6 +62,7 @@ area.addEventListener('click', async function () {
  await $('.box').fadeIn(700); 
  await $(areaSection).siblings('section').fadeOut(100);
   await $(areaSection).fadeIn(400);
+  await $('.areaData').fadeIn(400); 
  })
 
 
@@ -69,6 +72,7 @@ area.addEventListener('click', async function () {
  search.addEventListener('click', async function () { 
   await $(SearchSection).siblings('section').fadeOut(100);
   await $(SearchSection).fadeIn(400);
+  await $('.foundedData').fadeIn(400);
   for (let i = 0; i < searching.length; i++) {
     searching[i].addEventListener('input', async function () { 
       let inpVal= searching[i].value;
