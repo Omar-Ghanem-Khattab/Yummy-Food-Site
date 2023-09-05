@@ -50,7 +50,7 @@ categories.addEventListener('click', async function () {
    await $('.box').fadeIn(700);
    await $(ingredient).siblings('section').fadeOut(100);
    await $(ingredient).fadeIn(400);
-   await $('#ingredient').fadeIn(400);
+   await $('#ingredients').fadeIn(400);
  
  })
 
